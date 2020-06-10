@@ -1,0 +1,29 @@
+<%- include("../partials/header") %>
+
+<div class="page-login">
+  <div class="ui centered grid container">
+    <div class="nine wide column">
+	  <div class="ui fluid card">
+        <div class="content" >
+        <form class="ui form" method="POST" action="/register">
+          <div class="field">
+            <label>Enter Username</label>
+            <input type="text" name="username" placeholder="username">
+          </div>
+          <div class="field">
+            <label>Enter Password</label>
+            <input type="password" name="password" placeholder="Password">
+          </div>
+		  
+	          <button class=" ui black button" type="submit">
+    	        Register
+        	  </button>
+		  
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("../partials/footer") %>
