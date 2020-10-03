@@ -1,0 +1,35 @@
+<%- include("../partials/header") %>
+
+	
+<div >
+	<h1 class="ui huge header">Demo Blog App</h1></div>
+<div class="ui grid container">
+	
+			<% for (i=0; i<blogs.length; i++){%>
+			<div class="four wide column">
+				<div class="items">
+					<div class="ui image medium ">
+						<img src="<%= blogs[i].img %>">				
+					</div>	
+					<div class="content">
+						<a class="ui header" href="/blogs/<%= blogs[i]._id%>"><%= blogs[i].title %></a>
+						<div class="meta">
+							<span>by </span><a><%= blogs[i].user.username %></a>
+						</div>
+						<div class="meta">
+							<span><%= blogs[i].created.toDateString() %></span>
+						</div>
+						<div class="description textSize">
+							<p> <%= blogs[i].body.substring(0, 100) %>....</p>
+						</div>
+						<div class="extra">
+							<a class=" ui floated basic black button textSize" href="/blogs/<%= blogs[i]._id%>"> Read More
+							<i class="right chevron icon" ></i> 
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<%}%>
+</div>
+<%- include("../partials/footer") %>
